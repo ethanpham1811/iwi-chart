@@ -1,4 +1,6 @@
 export const BAR_CHART_HEIGHT = 380
+export const BAR_CHART_WIDTH = 500
+export const BAR_CHART_FONT_SIZE = 14
 export const BAR_CHART_INNER_HEIGHT = 280
 export const BAR_CHART_GRID_OFFSET = { top: 30, left: 55, right: 15 }
 export const BAR_CHART_X_LABEL_FONT_SIZE = 18

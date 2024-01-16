@@ -2,9 +2,11 @@
 
 import {
   BAR_CHART_COL_WIDTH,
+  BAR_CHART_FONT_SIZE,
   BAR_CHART_GRID_OFFSET,
   BAR_CHART_HEIGHT,
   BAR_CHART_INNER_HEIGHT,
+  BAR_CHART_WIDTH,
   BAR_CHART_X_LABEL_FONT_SIZE,
   BAR_CHART_X_LABEL_OFFSET,
   BAR_CHART_X_LABEL_PADDING,
@@ -29,7 +31,7 @@ function BarChart({ dataset, xName }: TBarChartProps) {
     height: BAR_CHART_INNER_HEIGHT,
     color: ['#5e8b92'],
     textStyle: {
-      fontSize: '14px',
+      fontSize: BAR_CHART_FONT_SIZE,
       fontWeight: 'bold',
       color: '#949494'
     },
@@ -95,7 +97,7 @@ function BarChart({ dataset, xName }: TBarChartProps) {
     }
   }
 
-  return <ReactECharts option={option} style={{ height: BAR_CHART_HEIGHT }} />
+  return <ReactECharts option={option} style={{ width: BAR_CHART_WIDTH, height: BAR_CHART_HEIGHT }} />
 }
 
 export default BarChart
