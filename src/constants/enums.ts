@@ -1,0 +1,11 @@
+export const BAR_CHART_HEIGHT = 380
+export const BAR_CHART_INNER_HEIGHT = 280
+export const BAR_CHART_GRID_OFFSET = { top: 30, left: 55, right: 15 }
+export const BAR_CHART_X_LABEL_FONT_SIZE = 18
+export const BAR_CHART_X_LABEL_PADDING = [35, 0, 0, 0]
+export const BAR_CHART_X_LABEL_OFFSET = [30, 8]
+export const BAR_CHART_Y_SPLIT_NUMBER = 4
+export const BAR_CHART_Y_LABEL_FONT_SIZE = 14
+export const BAR_CHART_Y_INTERVAL = 25
+export const BAR_CHART_Y_LABEL_OFFSET = 5
+export const BAR_CHART_COL_WIDTH = '98%'
