@@ -22,6 +22,13 @@ type TBarChartProps = {
   dataset: TDataSet[]
   xName: string
 }
+/**
+ * Renders a bar chart using the provided dataset and x-axis label.
+ *
+ * @param {TBarChartProps} dataset - The dataset used to render the bar chart.
+ * @param {string} xName - The label for the x-axis.
+ * @return {ReactElement} - The rendered bar chart as a React element.
+ */
 function BarChart({ dataset, xName }: TBarChartProps) {
   const option: EChartsOption = {
     /* --------------------------------------- DATA SOURCE ---------------------------------------- */
@@ -88,12 +95,50 @@ function BarChart({ dataset, xName }: TBarChartProps) {
           offset: BAR_CHART_X_LABEL_OFFSET,
           formatter: (params: LabelFormatterCallback) => (params.name === '100' ? '...' : params.name)
         }
+      },
+      {
+        type: 'bar',
+        smooth: true,
+        barWidth: BAR_CHART_COL_WIDTH,
+        color: 'red',
+        label: {
+          show: false
+        }
+      },
+      {
+        type: 'bar',
+        smooth: true,
+        barWidth: BAR_CHART_COL_WIDTH,
+        color: 'blue',
+        label: {
+          show: false
+        }
       }
     ],
 
     /* --------------------------------------------- TOOLTIP -------------------------------------------- */
     tooltip: {
       trigger: 'axis'
+    },
+
+    /* ---------------------------------------------- LEGEND --------------------------------------------- */
+    legend: {
+      show: true,
+      bottom: -5,
+      itemGap: 80,
+      itemWidth: 9,
+      itemHeight: 9,
+      icon: 'circle',
+      lineStyle: {
+        borderCap: 'round'
+      },
+      textStyle: {
+        align: 'left',
+        baseline: 'bottom',
+        // padding: [2, 10, 2, 10],
+        // borderRadius: 4,
+        lineHeight: 0
+      }
     }
   }
 
